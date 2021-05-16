@@ -8,7 +8,6 @@ public class GameBoard extends JPanel {
     int ycells = 30;
     int szcell = 10;       
        
-    public GameBoard() {
         setPreferredSize(new Dimension(xcells * szcell, ycells * szcell));        
         setBackground(Color.black);
         setFocusable(true);        
