@@ -1,3 +1,4 @@
+
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -27,7 +28,7 @@ public class MA_Prey extends JPanel {
     public MA_Prey()
     {
         
-        prey = new ImageIcon("resources/dot.png").getImage();
+        prey = new ImageIcon("images/smiley.png").getImage();
     
     } 
     
