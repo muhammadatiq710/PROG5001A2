@@ -1,4 +1,3 @@
-
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,10 +8,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
- * Class Prey represents any prey object.
- *
+ * Develop a prey Class.
  * @author Muhammad Atiq
- * @version
+ * @Date 23/May/2021
+ 
  */
 public class MA_Prey extends JPanel {
     /**
@@ -28,7 +27,7 @@ public class MA_Prey extends JPanel {
     public MA_Prey()
     {
         
-        prey = new ImageIcon("images/smiley.png").getImage();
+        prey = new ImageIcon("resources/apple.png").getImage();
     
     } 
     
@@ -41,7 +40,7 @@ public class MA_Prey extends JPanel {
     
     /** 
      * Method randomPlacement
-     * this method will allow user to view random placement of prey
+     * This method will allow prey to move at rendom positions.
      * 
      */
     public void randomPlacement()
