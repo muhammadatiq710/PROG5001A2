@@ -18,6 +18,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+/**
+ * @author Muhammad Atiq
+ * @Date 23/May/2021
+ */
 
 public class MA_SnakeGame extends JFrame implements ActionListener {
     private JLabel snakegamelabel;
