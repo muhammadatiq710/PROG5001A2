@@ -8,10 +8,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
- * Write a description of class Snake here.
- *
  * @author Muhammad Atiq
- * @version
+ * @Date 23/May/2021
  */
 public class MA_Snake extends JPanel
 {
@@ -23,15 +21,15 @@ public class MA_Snake extends JPanel
      * Constructor for objects of class Snake
      */
     public MA_Snake() {
-        // initialise instance variables   
-        head = new ImageIcon("images/head.png").getImage();
-        tail = new ImageIcon("images/tail.png").getImage();
+        // initialise the instance variables   
+        head = new ImageIcon("resources/head.png").getImage();
+        tail = new ImageIcon("resources/dot.png").getImage();
 
     }
     
     /**
-     * Method eatPrey
-     * the snake will eat the prey
+     * Eat prey method 
+     * In this method the snake will eat the prey
      */
     public void eatPrey()
     {
@@ -40,7 +38,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method changeDirection
-     * the snake will change it direction through arrow keys
+     * In this method the snake will change it direction through arrow keys
      */
     public void changeDirection()
     {
@@ -49,7 +47,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method growLonger
-     * the snake will grow longer when it will eat prey
+     * In this method the snake will grow longer when it will eat prey.
      */
     public void growLonger()
     {
@@ -58,7 +56,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method changeSpeed
-     * the snake will increase speed when it will eat prey
+     * In this method the snake will increase speed when it will eat prey
      */
     public void changeSpeed()
     {
