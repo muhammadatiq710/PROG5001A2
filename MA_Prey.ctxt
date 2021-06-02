@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=MA_Prey
+comment0.text=\r\n\ Develop\ a\ prey\ Class.\r\n\ @author\ Muhammad\ Atiq\r\n\ @Date\ 23/May/2021\r\n\ \r\n
+comment1.params=
+comment1.target=MA_Prey()
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+comment3.params=
+comment3.target=void\ randomPlacement()
+comment3.text=\ \r\n\ Method\ randomPlacement\r\n\ this\ method\ will\ allow\ user\ to\ view\ random\ placement\ of\ prey\r\n\ \r\n
+comment4.params=RAND_POS\ DOT_SIZE
+comment4.target=void\ locateApple(int,\ int)
+comment5.params=RAND_POS\ DOT_SIZE
+comment5.target=void\ locateApple_2(int,\ int)
+comment6.params=x\ y\ RAND_POS\ DOT_SIZE
+comment6.target=void\ checkApple(int,\ int,\ int,\ int)
+comment7.params=x\ y\ RAND_POS\ DOT_SIZE
+comment7.target=void\ checkApple_2(int,\ int,\ int,\ int)
+numComments=8
