@@ -1,8 +1,6 @@
 /**
- * Write a description of class Player here.
- *
  * @author Muhammad Atiq
- * @version (a version number or a date)
+ * @Date 23/May/2021
  */
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,7 +21,7 @@ public class MA_PlayerList
 
     /**
      * Method to add a Player
-     * @params name, password
+     * @name, password
      * @return none
      */
     public void add(String name, String password) {
