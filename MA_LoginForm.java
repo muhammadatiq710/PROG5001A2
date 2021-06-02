@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
  
 /**
- * This program demonstrates how to use JFrame and LayoutManager.
+ * Demonstration of JFrame and LayoutManager.
  * @author Muhammad Atiq
  */
 
