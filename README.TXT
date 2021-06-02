@@ -1,0 +1,5 @@
+PROJECT TITLE: Snake Game 
+PURPOSE OF PROJECT: To learn BlueJ 
+VERSION or DATE: 23/May/2021
+AUTHORS: Muhammad Atiq 
+
