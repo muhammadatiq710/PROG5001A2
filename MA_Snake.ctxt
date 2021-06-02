@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=MA_Snake
+comment0.text=\r\n\ @author\ Muhammad\ Atiq\r\n\ @Date\ 23/May/2021\r\n
+comment1.params=
+comment1.target=MA_Snake()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Snake\r\n
+comment2.params=
+comment2.target=void\ eatPrey()
+comment2.text=\r\n\ Method\ eatPrey\r\n\ the\ snake\ will\ eat\ the\ prey\r\n
+comment3.params=
+comment3.target=void\ changeDirection()
+comment3.text=\r\n\ Method\ changeDirection\r\n\ the\ snake\ will\ change\ it\ direction\ through\ arrow\ keys\r\n
+comment4.params=
+comment4.target=void\ growLonger()
+comment4.text=\r\n\ Method\ growLonger\r\n\ the\ snake\ will\ grow\ longer\ when\ it\ will\ eat\ prey\r\n
+comment5.params=
+comment5.target=void\ changeSpeed()
+comment5.text=\r\n\ Method\ changeSpeed\r\n\ the\ snake\ will\ increase\ speed\ when\ it\ will\ eat\ prey\r\n
+numComments=6
