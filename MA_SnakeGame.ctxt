@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MA_SnakeGame
+comment0.text=\r\n\ @author\ Muhammad\ Atiq\r\n\ @Date\ 23/May/2021\r\n
+comment1.params=SnakeGame
+comment1.target=MA_SnakeGame(java.lang.String)
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
