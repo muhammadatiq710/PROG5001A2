@@ -23,33 +23,20 @@ public class MA_GameBoard extends JPanel implements ActionListener {
     private final int DELAY = 140; 
 
     private final int x[] = new int[ALL_DOTS];
-    private final int y[] = new int[ALL_DOTS];
-    
-    private final int x_2[] = new int[ALL_DOTS];
-    private final int y_2[] = new int[ALL_DOTS]; 
-    
+    private final int y[] = new int[ALL_DOTS]; 
     public static int dots; 
-    public static int dots_2; 
+  
 
     private boolean leftDirection = false; 
     private boolean rightDirection = true;
     private boolean upDirection = false; 
     private boolean downDirection = false;
-    private boolean inGame = true;
-     
-    private boolean leftDirection_2 = false; 
-    private boolean rightDirection_2 = true;
-    private boolean upDirection_2 = false; 
-    private boolean downDirection_2 = false;
+     private boolean inGame = true; 
 
     private Timer timer;
     private Image ball; 
     private Image apple; 
     private Image head; 
-    
-    private Image ball_2; 
-    private Image apple_2; 
-    private Image head_2; 
     
     private MA_Prey prey;
     private MA_Snake snake;
@@ -77,31 +64,18 @@ public class MA_GameBoard extends JPanel implements ActionListener {
         ball = snake.tail;
         apple = prey.prey;
         head = snake.head;
-        
-        ball_2 = snake.tail_2;
-        apple_2 = prey.prey_2;
-        head_2 = snake.head_2;
     }
     
     private void initGame() {
 
         dots = 3;
-        
-        dots_2 = 5;
 
         for (int z = 0; z < dots; z++) {
             x[z] = 50 - z * 10;
             y[z] = 50;
         }
         
-        for (int z = 0; z < dots_2; z++) {
-            x_2[z] = 200 - z * 10;
-            y_2[z] = 200;
-        }
-        
         prey.locateApple(RAND_POS,DOT_SIZE);
-        
-        prey.locateApple_2(RAND_POS,DOT_SIZE);
 
         timer = new Timer(DELAY, this);
         timer.start();
@@ -119,21 +93,12 @@ public class MA_GameBoard extends JPanel implements ActionListener {
         if (inGame) {
 
             g.drawImage(apple, prey.apple_x, prey.apple_y, this);
-            g.drawImage(apple_2, prey.apple_x_2, prey.apple_y_2, this);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
                     g.drawImage(head, x[z], y[z], this);
                 } else {
                     g.drawImage(ball, x[z], y[z], this);
-                }
-            }
-            
-            for (int z = 0; z < dots_2; z++) {
-                if (z == 0) {
-                    g.drawImage(head_2, x_2[z], y_2[z], this);
-                } else {
-                    g.drawImage(ball_2, x_2[z], y_2[z], this);
                 }
             }
 
@@ -162,42 +127,21 @@ public class MA_GameBoard extends JPanel implements ActionListener {
             x[z] = x[(z - 1)];
             y[z] = y[(z - 1)];
         }
-        
-        for (int z = dots_2; z > 0; z--) {
-            x_2[z] = x_2[(z - 1)];
-            y_2[z] = y_2[(z - 1)];
-        }
 
         if (leftDirection) {
             x[0] -= DOT_SIZE;
-        }
-        
-        if (leftDirection_2) {
-            x_2[0] -= DOT_SIZE;
         }
 
         if (rightDirection) {
             x[0] += DOT_SIZE;
         }
-        
-        if (rightDirection_2) {
-            x_2[0] += DOT_SIZE;
-        }
 
         if (upDirection) {
             y[0] -= DOT_SIZE;
         }
-        
-        if (upDirection_2) {
-            y_2[0] -= DOT_SIZE;
-        }
 
         if (downDirection) {
             y[0] += DOT_SIZE;
-        }
-        
-        if (downDirection_2) {
-            y_2[0] += DOT_SIZE;
         }
     }
 
@@ -237,7 +181,6 @@ public class MA_GameBoard extends JPanel implements ActionListener {
         if (inGame) {
 
             prey.checkApple(x[0],y[0],RAND_POS,DOT_SIZE);
-            prey.checkApple_2(x_2[0],y_2[0],RAND_POS,DOT_SIZE);
             checkCollision();
             move();
         }
@@ -258,13 +201,6 @@ public class MA_GameBoard extends JPanel implements ActionListener {
                 downDirection = false;
                 timer.start();
             }
-            
-            if ((key == KeyEvent.VK_A) && (!rightDirection)) {
-                leftDirection_2 = true;
-                upDirection_2 = false;
-                downDirection_2 = false;
-                timer.start();
-            }
 
             if ((key == KeyEvent.VK_RIGHT) && (!leftDirection)) {
                 rightDirection = true;
@@ -272,14 +208,6 @@ public class MA_GameBoard extends JPanel implements ActionListener {
                 downDirection = false;
                 timer.start();
             }
-            
-            if ((key == KeyEvent.VK_D) && (!leftDirection)) {
-                rightDirection_2 = true;
-                upDirection_2 = false;
-                downDirection_2 = false;
-                timer.start();
-            }
-            
 
             if ((key == KeyEvent.VK_UP) && (!downDirection)) {
                 upDirection = true;
@@ -287,25 +215,11 @@ public class MA_GameBoard extends JPanel implements ActionListener {
                 leftDirection = false;
                 timer.start();
             }
-            
-            if ((key == KeyEvent.VK_W) && (!downDirection)) {
-                upDirection_2 = true;
-                rightDirection_2 = false;
-                leftDirection_2 = false;
-                timer.start();
-            }
 
             if ((key == KeyEvent.VK_DOWN) && (!upDirection)) {
                 downDirection = true;
                 rightDirection = false;
                 leftDirection = false;
-                timer.start();
-            }
-            
-            if ((key == KeyEvent.VK_S) && (!upDirection)) {
-                downDirection_2 = true;
-                rightDirection_2 = false;
-                leftDirection_2 = false;
                 timer.start();
             }
             

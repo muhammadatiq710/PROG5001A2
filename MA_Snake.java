@@ -16,26 +16,20 @@ public class MA_Snake extends JPanel
     
     Image head;
     Image tail;
-    
-    Image head_2;
-    Image tail_2;
 
     /**
      * Constructor for objects of class Snake
      */
     public MA_Snake() {
-        // initialise instance variables   
+        // initialise the instance variables   
         head = new ImageIcon("resources/head.png").getImage();
-        tail = new ImageIcon("resources/dot.png").getImage();
-        
-        head_2 = new ImageIcon("images/head.png").getImage();
-        tail_2 = new ImageIcon("images/tail.png").getImage();
+        tail = new ImageIcon("resources/tail.png").getImage();
 
     }
     
     /**
-     * Method eatPrey
-     * the snake will eat the prey
+     * Eat prey method 
+     * In this method the snake will eat the prey
      */
     public void eatPrey()
     {
@@ -44,7 +38,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method changeDirection
-     * the snake will change it direction through arrow keys
+     * In this method the snake will change it direction through arrow keys
      */
     public void changeDirection()
     {
@@ -53,7 +47,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method growLonger
-     * the snake will grow longer when it will eat prey
+     * In this method the snake will grow longer when it will eat prey.
      */
     public void growLonger()
     {
@@ -62,7 +56,7 @@ public class MA_Snake extends JPanel
     
     /**
      * Method changeSpeed
-     * the snake will increase speed when it will eat prey
+     * In this method the snake will increase speed when it will eat prey
      */
     public void changeSpeed()
     {
